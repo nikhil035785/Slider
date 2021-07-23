@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Slider Using Jquery</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
+</head>
+<body>
+	<div class="container">
+        <h1 class="text-center">Slider </h1>
+        <h5 class="text-center">Slider using if-else conditions and JQuery </h5>
+        <label style="font-size:15px;">(Responsive)</label>
+        <div class="slider-container" id="slider-container">
+
+            <button class="btn rounded-circle btn-primary btn-left"><</button>
+            <button class="btn rounded-circle btn-primary btn-right">></button>
+
+            <ul style="list-style: none;" class="ul-list" id="slider-nj">
+                <li class="">
+                    <div class="card">
+                        <div class="card-header card-img">
+                            <img src="images/3.jpg" class="img-fluid img-responsive" alt="">
+                        </div>
+                        <div class="card-body py-4">
+                            <a class="btn btn-primary">One</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="">
+                    <div class="card">
+                        <div class="card-header card-img">
+                            <img src="images/1.jpg" class="img-fluid img-responsive" alt="">
+                        </div>
+                        <div class="card-body py-4">
+                            <a class="btn btn-primary">Two</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="">
+                    <div class="card">
+                        <div class="card-header card-img">
+                            <img src="images/2.jpg" class="img-fluid img-responsive" alt="">
+                        </div>
+                        <div class="card-body py-4">
+                            <a class="btn btn-primary">Three</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="active">
+                    <div class="card">
+                        <div class="card-header card-img">
+                            <img src="images/1.jpg" class="img-fluid img-responsive" alt="">
+                        </div>
+                        <div class="card-body py-4">
+                            <a class="btn btn-primary">Four</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+            
+    </div>
+
+    <script type="text/javascript" src="js/slider.js"></script>
+</body>
+</html>

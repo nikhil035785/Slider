@@ -1,0 +1,501 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rounded-circle{
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    z-index: 150;
+    box-shadow: 1px 5px 17px 1px grey;
+}
+button: focus{
+    outline: none !important;
+    border-color: transparent;
+}
+.btn-primary:focus, .btn-primary.focus{
+    outline: none!important;
+    border-color: transparent;
+    outline-offset: 0;
+}
+.btn-right{
+    right: 10px;
+}
+.btn-left{
+    left:10px;
+}
+
+.slider-container{
+    position: relative;
+    width: 650px;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+/*card classes*/
+.card{
+    background-color: cyan;
+    padding: 0.5em;
+    border-radius: 5px;   
+}
+.card-body{
+    padding: 1em;
+}
+.card-img{
+    width: 100%;
+    height: auto;
+}
+
+
+.ul-list{
+    display: flex;
+    padding-left: 0px;
+    width: 650px;
+    overflow:hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+li.active .card, li.active2 .card{
+    box-shadow: 1px 5px 17px 1px grey;
+}
+
+/*This css classes for Next card slide*/
+li.active{
+    z-index: 100;
+    width: 350px;
+    opacity: 1;
+    animation: active-animate 2s;
+}
+.li-next-card{
+    z-index: 1;
+    right: 0;
+    animation-name: next-animate;
+    animation-duration: 1s;
+    opacity: 0.4;
+}
+.li-prev-card{
+    z-index: 1;
+    left: 0;
+    animation-name: prev-animate;
+    animation-duration: 1s;
+    opacity: 0.4;
+}
+
+/*This css classes for Previous card slide*/
+li.active2{
+    /* position: sticky; */
+    z-index: 100;
+    width: 350px;
+    opacity: 1;
+    animation: active2-animate 2s;
+}
+.li-next2-card{
+    z-index: 1;
+    left: 0;
+    animation-name: next2-animate;
+    animation-duration: 1s;
+    opacity: 0.4;
+}
+.li-prev2-card{
+    z-index: 1;
+    right: 0;
+    animation-name: prev2-animate;
+    animation-duration: 1s;
+    opacity: 0.4;
+}
+
+
+ul > li{
+    position: absolute;
+    cursor: pointer;
+    width: 300px;
+    opacity: 0;
+}
+
+/*This css keyframes for Previous card slide*/
+@keyframes next2-animate {
+    from {
+        left: 54%;
+        width: 300px;
+    }
+    to {
+        left: 0%;
+        width: 300px;
+    }
+}
+
+@keyframes active2-animate {
+    from {
+        left: 0;
+        width: 300px;
+        opacity: 0.4;
+    }
+    to {
+        left: 23%;
+        width: 350px;
+        opacity: 1;
+    }
+}
+
+@keyframes prev2-animate{
+    from {
+        right: 30%;
+        opacity: 1;
+        width: 350px;
+    }
+    to{
+        right: 0;
+        opacity: 0.4;
+        width: 300px;
+    }
+}
+
+
+/*This css keyframes for Next card slide*/
+@keyframes prev-animate {
+    from {
+        /* z-index: 100; */
+        left: 30%;
+        width: 350px;
+        opacity: 0.8;
+    }
+    to {
+        /* z-index: 1; */
+        left: 0;
+        width: 300px;
+        opacity: 0.4;
+    }
+}
+
+@keyframes active-animate {
+    from {
+        right: 0;
+        width: 300px;
+        opacity: 0.4;
+    }
+    to {
+        right: 23%;
+        width: 350px;
+        opacity: 1;
+    }
+}
+
+@keyframes next-animate {
+    from {
+        z-index: 100;
+        /* right: -10%; */
+        left: 0%;
+    }
+    to {
+        z-index: 1;
+        /* right: 0; */
+        left: 54%;
+    }
+}
+
+@media only screen and (max-width : 650px){
+    .slider-container {
+        width: 500px;
+    }
+    .ul-list {
+        width: 100%;
+        height: 300px;
+    }
+
+    /*This css keyframes for Previous card slide*/
+    @keyframes next2-animate {
+        from {
+            left: 40%;
+            width: 300px;
+        }
+        to {
+            left: 0%;
+            width: 300px;
+        }
+    }
+
+    @keyframes active2-animate {
+        from {
+            left: 0;
+            width: 300px;
+            opacity: 0.4;
+        }
+        to {
+            left: 15%;
+            width: 350px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes prev2-animate{
+        from {
+            right: 30%;
+            opacity: 1;
+            width: 350px;
+        }
+        to{
+            right: 0;
+            opacity: 0.4;
+            width: 300px;
+        }
+    }
+
+
+    /*This css keyframes for Next card slide*/
+    @keyframes prev-animate {
+        from {
+            /* z-index: 100; */
+            left: 30%;
+            width: 350px;
+            opacity: 0.8;
+        }
+        to {
+            /* z-index: 1; */
+            left: 0;
+            width: 300px;
+            opacity: 0.4;
+        }
+    }
+
+    @keyframes active-animate {
+        from {
+            right: 0;
+            width: 300px;
+            opacity: 0.4;
+        }
+        to {
+            right: 15%;
+            width: 350px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes next-animate {
+        from {
+            z-index: 100;
+            /* right: -10%; */
+            left: 0%;
+        }
+        to {
+            z-index: 1;
+            /* right: 0; */
+            left: 40%;
+        }
+    }
+}
+
+@media only screen and (max-width : 500px){
+    .slider-container {
+        width: 400px;
+    }
+    .ul-list {
+        width: 100%;
+        height: 300px;
+    }
+    /*li > .card{
+        height: 250px;
+    }*/
+    li.active,li.active2 {
+        width: 300px;
+        transform: scale3d(1, 1.1, 1);
+    }
+    
+
+    /*This css keyframes for Previous card slide*/
+    @keyframes next2-animate {
+        from {
+            left: 40%;
+            width: 280px;
+        }
+        to {
+            left: 0%;
+            width: 280px;
+        }
+    }
+
+    @keyframes active2-animate {
+        from {
+            left: 0;
+            width: 280px;
+            opacity: 0.8;
+            transform: scale3d(1, 1, 1);
+        }
+        to {
+            left: 13%;
+            width: 300px;
+            opacity: 1;
+            transform: scale3d(1, 1.1, 1);
+        }
+    }
+
+    @keyframes prev2-animate{
+        from {
+            right: 10%;
+            opacity: 1;
+            width: 300px;
+            transform: scale3d(1, 1.1, 1);
+        }
+        to{
+            right: 0;
+            opacity: 0.4;
+            width: 280px;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+
+    /*This css keyframes for Next card slide*/
+    @keyframes prev-animate {
+        from {
+            /* z-index: 100; */
+            left: 10%;
+            width: 300px;
+            opacity: 0.8;
+            transform: scale3d(1, 1.1, 1);
+        }
+        to {
+            /* z-index: 1; */
+            left: 0;
+            width: 280px;
+            opacity: 0.4;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    @keyframes active-animate {
+        from {
+            right: 1%;
+            width: 280px;
+            opacity: 0.8;
+            transform: scale3d(1, 1, 1);
+        }
+        to {
+            right: 12%;
+            width: 300px;
+            opacity: 1;
+            transform: scale3d(1, 1.1, 1);
+        }
+    }
+
+    @keyframes next-animate {
+        from {
+            z-index: 100;
+            left: 0%;
+        }
+        to {
+            z-index: 1;
+            left: 25%;
+        }
+    }
+}
+
+@media only screen and (max-width : 400px){
+    .slider-container {
+        width: 350px;
+    }
+    .ul-list {
+        width: 100%;
+        height: 300px;
+    }
+    /*li > .card{
+        height: 250px;
+    }*/
+    li.active,li.active2 {
+        width: 280px;
+        transform: scale3d(1, 1.1, 1);
+    }
+    
+
+    /*This css keyframes for Previous card slide*/
+    @keyframes next2-animate {
+        from {
+            left: 7%;
+            width: 280px;
+        }
+        to {
+            left: 0%;
+            width: 280px;
+        }
+    }
+
+    @keyframes active2-animate {
+        from {
+            left: 0;
+            width: 280px;
+            opacity: 0.8;
+            transform: scale3d(1, 1, 1);
+        }
+        to {
+            left: 10%;
+            width: 280px;
+            opacity: 1;
+            transform: scale3d(1, 1.1, 1);
+        }
+    }
+
+    @keyframes prev2-animate{
+        from {
+            right: 10%;
+            opacity: 1;
+            width: 280px;
+            transform: scale3d(1, 1.1, 1);
+        }
+        to{
+            right: 0;
+            opacity: 0.4;
+            width: 280px;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+
+    /*This css keyframes for Next card slide*/
+    @keyframes prev-animate {
+        from {
+            /* z-index: 100; */
+            left: 10%;
+            width: 280px;
+            opacity: 0.8;
+            transform: scale3d(1, 1.1, 1);
+        }
+        to {
+            /* z-index: 1; */
+            left: 0;
+            width: 280px;
+            opacity: 0.4;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    @keyframes active-animate {
+        from {
+            right: 1%;
+            width: 280px;
+            opacity: 0.8;
+            transform: scale3d(1, 1, 1);
+        }
+        to {
+            right: 10%;
+            width: 280px;
+            opacity: 1;
+            transform: scale3d(1, 1.1, 1);
+        }
+    }
+
+    @keyframes next-animate {
+        from {
+            z-index: 100;
+            left: 0%;
+        }
+        to {
+            z-index: 1;
+            left: 14%;
+        }
+    }
+}
